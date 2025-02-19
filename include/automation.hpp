@@ -4,7 +4,7 @@
 #include <span>
 #include <random>
 
-// ? Declare CellState first before `rules::`
+// Declare CellState first before `rules::`
 class CellState {
     unsigned value_;
 public:
@@ -14,7 +14,7 @@ public:
     void randomize();
 };
 
-// ? Now declare `rules` after `CellState`
+// Now declare `rules` after `CellState`
 namespace rules {
     CellState game_of_life_rule(std::span<const CellState> neighborhood);
     CellState cyclic_rule(std::span<const CellState> neighborhood);
@@ -22,7 +22,7 @@ namespace rules {
     CellState xor_rule(std::span<const CellState> neighborhood);
 }
 
-// ? Declare AutomatonGrid class
+// Declare AutomatonGrid class
 class AutomatonGrid {
 public:
     using RuleFunction = CellState (*)(std::span<const CellState>);

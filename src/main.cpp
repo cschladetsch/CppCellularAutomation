@@ -7,7 +7,7 @@
 
 using namespace std::chrono_literals;  
 
-// ? Remove: using namespace rules;
+// Remove: using namespace rules;
 
 class AutomatonVisualizer {
     static constexpr size_t GRID_SIZE = 60;
