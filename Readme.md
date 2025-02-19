@@ -90,11 +90,6 @@ Alternatively, run:
 ./automaton_tests  
 ```
 
-## Dependencies
-
-- **rang.hpp** - Color and styling library (auto-downloaded)  
-- **Catch2** - Unit testing framework (auto-downloaded)  
-
 ## Installation
 
 ### **Prerequisites**
@@ -105,7 +100,7 @@ Alternatively, run:
 ### **Build Instructions**
 
 ```sh
-git clone https://github.com/your-repo/cellular-automaton.git  
+git clone https://github.com/cschladetsch/cellular-automaton.git  
 cd cellular-automaton  
 mkdir build && cd build  
 cmake ..  
@@ -132,25 +127,6 @@ Select rule (1-4):
 ```
 - If you select **Game of Life (4)**, the grid initializes with a **glider**, which will move across the screen.  
 - Other rules produce **different evolving patterns**.
-
-## Project Structure
-
-```
-include/
-    automation.hpp       # Core automaton logic
-    test_rang.hpp        # Terminal color handling
-
-src/
-    main.cpp             # Entry point
-    automation.cpp       # Automaton logic implementation
-
-tests/
-    test_automation.cpp  # Unit tests for automaton logic
-    test_rang.cpp        # Tests for terminal color handling
-
-CMakeLists.txt           # Build system configuration
-Readme.md                # Project documentation
-```
 
 ## Testing
 
