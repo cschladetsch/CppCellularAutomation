@@ -12,7 +12,7 @@ The simulation runs directly in the **terminal**, displaying color-coded ASCII r
 
 ## Demo
 
-![image](!/resources/CellularAutoation-1.gif)
+![image](/resources/CellularAutoation-1.gif)
 
 
 ## Features
