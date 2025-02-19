@@ -1,6 +1,7 @@
 # Advanced Cellular Automaton Simulator
 
 ## Overview
+
 This project is an **Advanced Cellular Automaton Simulator**, capable of running various rule-based cellular automata such as:
 - **BZ-Inspired (Spiral patterns)**
 - **Neural-Like (Wave patterns)**
@@ -24,6 +25,7 @@ The simulation runs directly in the **terminal**, displaying color-coded ASCII r
 - **GNU Make** or equivalent build system  
 
 ### **Build Instructions**
+
 ```sh
 git clone https://github.com/your-repo/cellular-automaton.git  
 cd cellular-automaton  
@@ -56,20 +58,20 @@ Select rule (1-4):
 ## Project Structure
 
 ```
-ÃÄÄ include/
-³   ÃÄÄ automation.hpp       # Core automaton logic
-³   ÃÄÄ test_rang.hpp        # Terminal color handling
-³
-ÃÄÄ src/
-³   ÃÄÄ main.cpp             # Entry point
-³   ÃÄÄ automation.cpp       # Automaton logic implementation
-³
-ÃÄÄ tests/
-³   ÃÄÄ test_automation.cpp  # Unit tests for automaton logic
-³   ÃÄÄ test_rang.cpp        # Tests for terminal color handling
-³
-ÃÄÄ CMakeLists.txt           # Build system configuration
-ÃÄÄ Readme.md                # Project documentation
+include/
+    automation.hpp       # Core automaton logic
+    test_rang.hpp        # Terminal color handling
+
+src/
+    main.cpp             # Entry point
+    automation.cpp       # Automaton logic implementation
+
+tests/
+    test_automation.cpp  # Unit tests for automaton logic
+    test_rang.cpp        # Tests for terminal color handling
+
+CMakeLists.txt           # Build system configuration
+Readme.md                # Project documentation
 ```
 
 ## Testing
