@@ -54,20 +54,20 @@ You will be prompted to select a rule. Press `Ctrl+C` to exit.
 ## Project Structure  
 
 ```
-ÃÄÄ include/
-³   ÃÄÄ automation.hpp      # Core automaton logic
-³   ÃÄÄ rang.hpp            # Terminal color handling (auto-downloaded)
-³   ÃÄÄ catch.hpp           # Unit testing framework (auto-downloaded)
-³
-ÃÄÄ src/
-³   ÃÄÄ main.cpp            # Entry point
-³
-ÃÄÄ tests/
-³   ÃÄÄ test_automation.cpp # Unit tests for automaton logic
-³   ÃÄÄ test_rang.cpp       # Tests for color output
-³
-ÃÄÄ CMakeLists.txt          # Build system
-ÃÄÄ Readme.md               # Documentation
+include/
+Â³   ÃƒÃ„Ã„ automation.hpp      # Core automaton logic
+Â³   ÃƒÃ„Ã„ rang.hpp            # Terminal color handling (auto-downloaded)
+Â³   ÃƒÃ„Ã„ catch.hpp           # Unit testing framework (auto-downloaded)
+Â³
+src/
+Â³   ÃƒÃ„Ã„ main.cpp            # Entry point
+Â³
+tests/
+Â³   ÃƒÃ„Ã„ test_automation.cpp # Unit tests for automaton logic
+Â³   ÃƒÃ„Ã„ test_rang.cpp       # Tests for color output
+Â³
+CMakeLists.txt          # Build system
+Readme.md               # Documentation
 ```
 
 ## Testing  
