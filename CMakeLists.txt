@@ -20,11 +20,11 @@ endif()
 include_directories(${PROJECT_SOURCE_DIR}/include)
 include_directories(${PROJECT_SOURCE_DIR}/external)
 
-# ? Add automaton_lib library
+# Add automaton_lib library
 add_library(automaton_lib STATIC src/automation.cpp)
 target_include_directories(automaton_lib PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
-# ? Ensure `main.cpp` is included in the build
+# Ensure `main.cpp` is included in the build
 add_executable(automaton src/main.cpp)
 target_link_libraries(automaton PRIVATE automaton_lib)
 target_include_directories(automaton PRIVATE ${PROJECT_SOURCE_DIR}/include)
