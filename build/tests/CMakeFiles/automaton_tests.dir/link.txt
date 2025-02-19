@@ -1,1 +1,0 @@
-/usr/bin/c++  -Wall -Wextra -Wpedantic -O3 -DNDEBUG CMakeFiles/automaton_tests.dir/test_automation.cpp.o -o automaton_tests 
