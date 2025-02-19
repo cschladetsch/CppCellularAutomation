@@ -55,17 +55,14 @@ You will be prompted to select a rule. Press `Ctrl+C` to exit.
 
 ```
 include/
-³   ÃÄÄ automation.hpp      # Core automaton logic
-³   ÃÄÄ rang.hpp            # Terminal color handling (auto-downloaded)
-³   ÃÄÄ catch.hpp           # Unit testing framework (auto-downloaded)
-³
+    automation.hpp      # Core automaton logic
+    rang.hpp            # Terminal color handling (auto-downloaded)
+    catch.hpp           # Unit testing framework (auto-downloaded)
 src/
-³   ÃÄÄ main.cpp            # Entry point
-³
+    main.cpp            # Entry point
 tests/
-³   ÃÄÄ test_automation.cpp # Unit tests for automaton logic
-³   ÃÄÄ test_rang.cpp       # Tests for color output
-³
+    test_automation.cpp # Unit tests for automaton logic
+    test_rang.cpp       # Tests for color output
 CMakeLists.txt          # Build system
 Readme.md               # Documentation
 ```
