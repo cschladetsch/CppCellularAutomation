@@ -4,6 +4,10 @@
 
 This project is an **Advanced Cellular Automaton Simulator**, featuring various rule-based evolution methods such as BZ-Inspired, Neural-Like, and Reaction-Diffusion models. The simulation is rendered directly in the console with color-coded ASCII representations.  
 
+## Demo
+
+![demo](/resources/CellularAutoation-1.gif)
+
 ## Features  
 
 - **Rule-Based Cellular Automata**  
