@@ -32,7 +32,7 @@ The simulation runs directly in the **terminal**, displaying color-coded ASCII r
 ### **Build Instructions**
 
 ```sh
-git clone https://github.com/your-repo/cellular-automaton.git  
+git clone https://github.com/cschladetsch/cellular-automaton.git  
 cd cellular-automaton  
 mkdir build && cd build  
 cmake ..  
@@ -94,15 +94,6 @@ Alternatively, run:
 
 - **rang.hpp** - Color and styling library (auto-downloaded)  
 - **Catch2** - Unit testing framework (auto-downloaded)  
-
-## License
-
-This project is licensed under the MIT License.
-? **Multiple Cellular Automaton Rules** (including Game of Life)  
-? **Real-time Terminal Visualization** with ASCII symbols  
-? **Configurable Grid Size**  
-? **Glider Initialization for Game of Life**  
-? **Unit Tests with Catch2 Framework**  
 
 ## Installation
 
