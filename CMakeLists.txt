@@ -16,23 +16,27 @@ if(NOT CMAKE_BUILD_TYPE)
     set(CMAKE_BUILD_TYPE Release)
 endif()
 
-# Create automaton_lib library (for shared automaton logic)
+# Ensure include directories are set
+include_directories(${PROJECT_SOURCE_DIR}/include)
+include_directories(${PROJECT_SOURCE_DIR}/external)
+
+# ? Add automaton_lib library
 add_library(automaton_lib STATIC src/automation.cpp)
 target_include_directories(automaton_lib PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
-# Add main executable
+# ? Ensure `main.cpp` is included in the build
 add_executable(automaton src/main.cpp)
 target_link_libraries(automaton PRIVATE automaton_lib)
+target_include_directories(automaton PRIVATE ${PROJECT_SOURCE_DIR}/include)
 
-# Add test executables
+# ? Ensure tests are included
 add_executable(automaton_tests tests/test_automation.cpp)
 add_executable(test_rang tests/test_rang.cpp)
 
-target_link_libraries(automaton_tests PRIVATE automaton_lib)
-target_link_libraries(test_rang PRIVATE automaton_lib)
-
 target_include_directories(automaton_tests PRIVATE ${PROJECT_SOURCE_DIR}/include)
 target_include_directories(test_rang PRIVATE ${PROJECT_SOURCE_DIR}/include)
+target_link_libraries(automaton_tests PRIVATE automaton_lib)
+target_link_libraries(test_rang PRIVATE automaton_lib)
 
 enable_testing()
 add_test(NAME automaton_tests COMMAND automaton_tests)

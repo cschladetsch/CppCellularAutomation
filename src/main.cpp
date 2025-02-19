@@ -5,7 +5,9 @@
 #include <iostream>
 #include <iomanip>
 
-using namespace std::chrono_literals;
+using namespace std::chrono_literals;  
+
+// ? Remove: using namespace rules;
 
 class AutomatonVisualizer {
     static constexpr size_t GRID_SIZE = 60;
@@ -14,13 +16,13 @@ class AutomatonVisualizer {
 public:
     void run() {
         std::cout << rang::style::bold << rang::fg::cyan 
-                  << "Advanced Cellular Automaton Simulator
-" 
+                  << "Advanced Cellular Automaton Simulator" 
                   << rang::style::reset << std::endl;
 
         auto rule = select_rule();
         AutomatonGrid grid(GRID_SIZE, GRID_HEIGHT, rule);
 
+        // ? Fix: Use `rules::` explicitly
         if (rule == rules::game_of_life_rule) {
             initialize_glider(grid);
         }
@@ -53,27 +55,23 @@ private:
     }
 
     static AutomatonGrid::RuleFunction select_rule() {
-        std::cout << "Available Rules:
-"
-                  << "1. BZ-Inspired (Spiral patterns)
-"
-                  << "2. Neural-Like (Wave patterns)
-"
-                  << "3. Reaction-Diffusion (Spotted patterns)
-"
-                  << "4. Conway's Game of Life (with Glider)
-"
+        std::cout << "Available Rules:\n"
+                  << "1. BZ-Inspired (Spiral patterns)\n"
+                  << "2. Neural-Like (Wave patterns)\n"
+                  << "3. Reaction-Diffusion (Spotted patterns)\n"
+                  << "4. Conway's Game of Life (with Glider)\n"
                   << "Select rule (1-4): ";
 
         int choice;
         std::cin >> choice;
 
+        // ? Fix: Explicitly reference `rules::`
         switch (choice) {
-            case 1: return rules::cyclic_rule;
-            case 2: return rules::majority_rule;
-            case 3: return rules::xor_rule;
-            case 4: return rules::game_of_life_rule;
-            default: return rules::cyclic_rule;
+            case 1: return &rules::cyclic_rule;
+            case 2: return &rules::majority_rule;
+            case 3: return &rules::xor_rule;
+            case 4: return &rules::game_of_life_rule;
+            default: return &rules::cyclic_rule;
         }
     }
 
@@ -85,8 +83,6 @@ private:
                 char symbol = grid.at(x, y).value() > 0 ? '#' : '.';
                 std::cout << symbol << ' ';
             }
-            std::cout << '
-';
         }
     }
 };
@@ -96,10 +92,11 @@ int main() {
         AutomatonVisualizer visualizer;
         visualizer.run();
     } catch (const std::exception& e) {
-        std::cerr << rang::fg::red 
-                  << "Error: " << e.what() 
+        std::cerr << rang::fg::red
+                  << "Error: " << e.what()
                   << rang::fg::reset << std::endl;
         return 1;
     }
     return 0;
 }
+
