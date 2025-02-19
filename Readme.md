@@ -97,16 +97,6 @@ Alternatively, run:
 - **CMake 3.28+**  
 - **GNU Make** or equivalent build system  
 
-### **Build Instructions**
-
-```sh
-git clone https://github.com/cschladetsch/cellular-automaton.git  
-cd cellular-automaton  
-mkdir build && cd build  
-cmake ..  
-make  
-```
-
 ### **Run the Simulator**
 ```sh
 ./automaton  
