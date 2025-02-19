@@ -1,7 +1,7 @@
 #include "automation.hpp"
 #include <algorithm>
 
-// ? Move function definitions here
+// Move function definitions here
 CellState::CellState(unsigned val) : value_(val % 16) {}
 unsigned CellState::value() const { return value_; }
 void CellState::set_value(unsigned val) { value_ = val % 16; }
@@ -12,7 +12,7 @@ void CellState::randomize() {
     value_ = dis(gen);
 }
 
-// ? AutomatonGrid Implementations
+// AutomatonGrid Implementations
 AutomatonGrid::AutomatonGrid(size_t w, size_t h, RuleFunction rule)
     : width_(w), height_(h), rule_(rule), grid_(w * h, CellState(0)) {}
 
@@ -43,9 +43,7 @@ void AutomatonGrid::evolve() {
     grid_ = std::move(new_grid);
 }
 
-#include "automation.hpp"
-
-// ✅ Define the missing `rules` functions
+// Define the missing `rules` functions
 namespace rules {
     CellState game_of_life_rule(std::span<const CellState> neighborhood) {
         int live_neighbors = std::count_if(neighborhood.begin(), neighborhood.end(),
